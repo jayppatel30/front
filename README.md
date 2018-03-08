@@ -35,6 +35,36 @@ How to use Vue js
 14. once youcreated the app use this command to run the app on the port
 15. npm run dev
 16.. you did that.. now i need a treat for that :P
+
+GitHub installation and commands
+
+Step 1 : Check if git is already installed.
+terminal - git --version
+
+Step 2 : Download and install git
+https://git-scm.com/download/mac
+
+Step 3 : Signup and create a account on GitHub
+https://github.com/
+
+Step 4 : Add your github email and username to git
+git config --global user.email "yourGitHub@email.com"
+git config --global user.name "yourGitHubusername"
+
+
+Step 5 : Add file/folders to git - tracking
+
+Step 6 : Commands
+- terminal - goto the location of the folder/project
+- git init
+- git status
+- git add
+- git commit -m “…..”
+- git remote add origin “location of remote repo”
+- git push -u origin master
+- git log
+- git --help
+
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
