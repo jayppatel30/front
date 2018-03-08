@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import page from './components/user'
+import user from './components/user'
 
 export default {
   name: 'App',
