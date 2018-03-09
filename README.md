@@ -22,17 +22,17 @@ How to use Vue js
 1. Download node.js from nodeorg.js -->download
 2. go to vuejs.org --> get started --> installation -->(we will use CLI)
 3. Open terminal (for mac) or cmd (windowns)
-4. write the following line of code to install
-5. create a folder name Project on folder.
-6. then write this command in terminal or cmd
-7. cd desktop
-8. cd project
-9. npm install --global vue -cli 
-10. vue init webpack appname(use your app name insted of appname in the command)
-11. answer the questions..
-12.. Bang!!! you are very smart.. you did that :)
-13. Now open with the editor you like (i used Sublime text)
-14. once youcreated the app use this command to run the app on the port
+4. create a folder name Project on desktop.
+5. then write this command in terminal or cmd
+6. cd desktop
+7. cd project
+8. npm install --global vue -cli 
+9. vue init webpack appname(use your app name insted of appname in the command)
+10. answer the questions..
+11.. Bang!!! you are very smart.. you did that :)
+12. Now open with the editor you like (i used Sublime text)
+13. once youcreated the app use this command to run the app on the port
+14. //IF YOU DOWNLOADED THE CODE JUST GO TO THE DIRECTORY IN TERMINAL OR MAC THEN RUN THE CODE BY FOLLOWING LINE
 15. npm run dev
 16.. you did that.. now i need a treat for that :P
 
@@ -69,7 +69,7 @@ Step 6 : Commands
 
 Problems Faced
 
-1. for validation of form i was checking if its null by using '' but it just worked when i clicked on the text field and didnt wrote anything but then i figured out that insted of using '' , null is the correct thing to use. Then it worked.
+1. for validation of form i was checking if its null by using '' but it just worked when i clicked on the text field and didnt wrote anything but then i figured out that insted of using '', null is the correct thing to use. Then it worked.
 
 ```
 
