@@ -6,7 +6,7 @@
 			<br/>
 			<label>Last Name</label><input type="text" v-model="newUser.lastname" placeholder="Enter Last Name"> 
 			<br/>
-			<label>Email</label><input type="text" v-model="newUser.email" placeholder="Enter Email"><br/> 
+			<label>Email</label><input type="email" v-model="newUser.email" placeholder="Enter Email"><br/> 
 			<label>Date Of Birth</label><input type="date" v-model="newUser.dob" placeholder="Enter dob" value="mm-dd-yyyy"><br/>
 
 			<label>State </label> 
@@ -102,31 +102,31 @@
 		},
 		methods: {
 			addUser: function(e){
-				if(this.newUser.firstname == ('')){
+				if(this.newUser.firstname == (null)){
 					alert("first name is empty")
 					e.preventDefault();
 				}
-				else if (this.newUser.lastname == ('')){
+				else if (this.newUser.lastname == (null)){
 					alert("last name is empty")
 					e.preventDefault();
 				}
-				else if (this.newUser.email == ('')){
+				else if (this.newUser.email == (null)){
 				 	alert("Email is empty")
 				 	e.preventDefault();
 				}
-				else if (!this.newUser.email.includes('@')){
-					alert("Email should contain @")
+				else if (this.newUser.dob == (null)){
+					alert("add your birthdate")
 					e.preventDefault()
 				}
-				else if (this.newUser.state == ('')){
+				else if (this.newUser.state == (null)){
 					alert("State is not selected")
 					e.preventDefault()
 				}
-				else if (this.newUser.sex == ('')){
+				else if (!(this.newUser.sex == ('male') || this.newUser.sex == ('female'))) {
 					alert("select your sex")
 					e.preventDefault()
 				}
-				else{
+				else {
 					this.user.push({
 						firstname: this.newUser.firstname,
 						lastname: this.newUser.lastname,
@@ -141,6 +141,12 @@
 			},
 			deleteUser: function(user){
 				this.user.splice(this.user.indexOf(user),1)
+			},
+			clearField: function() {
+			   if(document.getElementById) {
+			      document.chatform.reset();
+			      e.preventDefault();
+			   }
 			}
 		}
 	}

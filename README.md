@@ -65,6 +65,12 @@ Step 6 : Commands
 - git log
 - git --help
 
+
+
+Problems Faced
+
+1. for validation of form i was checking if its null by using '' but it just worked when i clicked on the text field and didnt wrote anything but then i figured out that insted of using '' , null is the correct thing to use. Then it worked.
+
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
