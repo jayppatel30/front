@@ -118,7 +118,7 @@
 					alert("add your birthdate")
 					e.preventDefault()
 				}
-				else if (this.newUser.state == (null)){
+				else if (this.newUser.state == ('')){
 					alert("State is not selected")
 					e.preventDefault()
 				}
