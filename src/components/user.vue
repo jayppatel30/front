@@ -2,9 +2,9 @@
 	<div class = "user">
 		<h1> User </h1>
 		<form v-on:submit = "addUser">
-			<label>First Name</label><input type="text" v-model="newUser.firstname" placeholder="Enter First Name"> 
+			<label>First Name</label><input type="text" pattern= "[a-zA-Z][a-zA-Z]{1,}" v-model="newUser.firstname" placeholder="Enter First Name"> 
 			<br/>
-			<label>Last Name</label><input type="text" v-model="newUser.lastname" placeholder="Enter Last Name"> 
+			<label>Last Name</label><input type="text" v-model="newUser.lastname" pattern= "[a-zA-Z][a-zA-Z]{1,}" placeholder="Enter Last Name"> 
 			<br/>
 			<label>Email</label><input type="email" v-model="newUser.email" placeholder="Enter Email"><br/> 
 			<label>Date Of Birth</label><input type="date" v-model="newUser.dob" placeholder="Enter dob" value="mm-dd-yyyy"><br/>
