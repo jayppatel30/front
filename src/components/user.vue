@@ -2,14 +2,15 @@
 	<div class = "user">
 		<h1> User </h1>
 		<form v-on:submit = "addUser">
-			<label>First Name</label><input type="text" pattern= "[a-zA-Z][a-zA-Z]{1,}" v-model="newUser.firstname" placeholder="Enter First Name"> 
+			<label>First Name:&emsp;&emsp;&nbsp;&nbsp; </label><input type="text" pattern= "[a-zA-Z][a-zA-Z]{1,}" v-model="newUser.firstname" placeholder="Enter First Name"> 
 			<br/>
-			<label>Last Name</label><input type="text" v-model="newUser.lastname" pattern= "[a-zA-Z][a-zA-Z]{1,}" placeholder="Enter Last Name"> 
+			<label>Last Name:&emsp;&emsp;&emsp;</label><input type="text" v-model="newUser.lastname" pattern= "[a-zA-Z][a-zA-Z]{1,}" placeholder="Enter Last Name"> 
 			<br/>
-			<label>Email</label><input type="email" v-model="newUser.email" placeholder="Enter Email"><br/> 
-			<label>Date Of Birth</label><input type="date" v-model="newUser.dob" placeholder="Enter dob" value="mm-dd-yyyy"><br/>
+			<label>Email:&emsp;&emsp;&emsp;&emsp;&emsp;</label><input type="email" v-model="newUser.email" placeholder="Enter Email"><br/> 
+			<label>Date Of Birth: &emsp;</label><input type="date" v-model="newUser.dob" placeholder="Enter dob" value="mm-dd-yyyy"><br/>
 
-			<label>State </label> 
+			<div class = "styled-select slate">
+			<label>State: &emsp;&emsp;&emsp;&emsp;&nbsp;</label> 
 			<select name = "state" v-model = "newUser.state" placeholder = "Enter State">
 				<option value=""></option>
                 <option value="AL">Alabama</option>
@@ -63,10 +64,11 @@
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
-              </select>       
+              </select>   
+              </div>    
 			<br/> 
-			<label>Sex</label><input type="radio" v-model="newUser.sex" value="male" />Male<br />
-			<input type="radio" v-model="newUser.sex" value= "female"/> female<br />
+				<label>Sex: &emsp;&emsp;&emsp;&emsp;&emsp;</label><input type="radio" v-model="newUser.sex" value="male" />Male&emsp;
+				<input type="radio" v-model="newUser.sex" value= "female"/> female &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
 			<input type="submit">
 		</form>
 		<table style="width:100%">
@@ -118,7 +120,7 @@
 					alert("add your birthdate")
 					e.preventDefault()
 				}
-				else if (this.newUser.state == ('')){
+				else if (this.newUser.state == (null)){
 					alert("State is not selected")
 					e.preventDefault()
 				}
@@ -153,6 +155,79 @@
 </script>
 
 <style scoped>
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input[type=email], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email]:focus {
+    background-color: lightblue;
+}
+
+input[type=Date], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=date]:focus {
+    background-color: lightblue;
+}
+
+.styled-select select {
+	height: 40px;
+ 	width: 52%;
+    padding: 12px 20px;
+    margin: -5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
 
 table {
     font-family: arial, sans-serif;
